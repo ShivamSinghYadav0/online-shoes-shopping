@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="Original footwear campaign artwork for basketball">
+ <defs><linearGradient id="bg" x1="0" y1=".25" x2="1" y2="1"><stop stop-color="#261d20"/><stop offset="1" stop-color="#67352d"/></linearGradient><radialGradient id="light" cx="71%" cy="43%" r="60%"><stop stop-color="#ffc46d" stop-opacity=".24"/><stop offset="1" stop-color="#ffc46d" stop-opacity="0"/></radialGradient></defs><defs><filter id="soft" x="-50%" y="-80%" width="200%" height="260%"><feGaussianBlur stdDeviation="28"/></filter><pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#fff" opacity=".18"/></pattern><linearGradient id="fade" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff" stop-opacity=".12"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient></defs>
+ <rect width="1600" height="900" fill="url(#bg)"/><rect width="1600" height="900" fill="url(#light)"/><rect width="1600" height="900" fill="url(#dots)" opacity=".7"/>
+ <circle cx="1128" cy="450" r="375" stroke="#ffc46d" opacity=".20" stroke-width="2" fill="none"/><circle cx="1128" cy="450" r="303" stroke="#ffc46d" opacity=".23" stroke-width="2" fill="none"/><circle cx="1128" cy="450" r="233" stroke="#ffc46d" opacity=".10" stroke-width="75" fill="none"/>
+ <path d="M580 0L1360 0L810 900L0 900Z" fill="url(#fade)"/><g transform="translate(205,-13) scale(.94)"><g class="shoe" transform="translate(12,6) rotate(-16 690 440)">
+ <ellipse cx="684" cy="644" rx="345" ry="51" fill="#071b19" opacity=".25" filter="url(#soft)"/>
+ <path d="M373 472 C417 470 476 447 516 398 L610 293 C633 270 684 277 723 304 L819 379 C839 400 864 420 915 426 L1054 443 C1104 452 1141 476 1152 516 L1144 558 C1095 596 1037 613 943 616 L530 628 C468 629 394 618 339 588 C321 554 337 512 373 472Z" fill="#26372d" stroke="#0c1b19" stroke-width="9"/>
+ <path d="M380 473 C448 474 497 440 544 381 L618 297 C633 280 667 277 697 292 C742 321 772 372 818 402 C867 432 948 425 1038 452 C1080 464 1110 474 1129 505 C1092 546 1025 559 922 565 L527 579 C443 571 385 537 353 514Z" fill="#ffc46d"/>
+ <path d="M622 294 C665 276 701 298 735 340 L775 391 L709 442 L583 378Z" fill="#e56048" opacity=".90"/>
+ <path d="M351 505 C412 515 471 545 529 547 L926 545 C1014 540 1101 514 1130 493 C1151 513 1149 537 1144 564 C1090 606 1007 626 928 628 L530 638 C459 639 395 623 346 601 C334 574 333 533 351 505Z" fill="#f8f7ee" stroke="#26372d" stroke-width="10"/>
+ <path d="M352 571 Q558 623 926 589 Q1060 582 1144 537" fill="none" stroke="#e56048" stroke-width="13" opacity=".85"/>
+ <path d="M410 607 L444 614 M482 623 L514 627 M559 628 L589 627 M646 625 L676 624 M731 622 L761 620 M814 616 L844 612 M895 609 L925 606 M985 599 L1012 592" stroke="#26372d" stroke-width="12" stroke-linecap="round"/>
+ <path d="M483 475 L593 359 L701 433 L595 541Z" fill="#fff8" opacity=".38"/>
+ <path d="M554 394 C592 406 651 444 683 459" fill="none" stroke="#26372d" opacity=".64" stroke-width="8" stroke-linecap="round"/>
+ <path d="M536 420 L646 469 M517 442 L628 490 M491 465 L603 509" stroke="#f8f7ee" stroke-width="10" stroke-linecap="round"/>
+ <path d="M784 428 C824 446 867 466 924 472 C895 496 850 508 807 508 C779 493 771 469 784 428Z" fill="#26372d" opacity=".83"/>
+ <path d="M811 456 L873 474" stroke="#f8f7ee" stroke-width="12" stroke-linecap="round"/>
+ <path d="M999 459 C1030 466 1052 486 1057 511" fill="none" stroke="#26372d" stroke-width="10" opacity=".45"/>
+ <path d="M378 489 C414 472 435 469 465 465" fill="none" stroke="#e56048" stroke-width="15" stroke-linecap="round"/>
+ </g></g>
+ <path d="M900 98h610 M1280 116h230 M1010 788h490" stroke="#ffc46d" opacity=".52" stroke-width="2"/>
+ <text x="1034" y="192" font-family="Arial,sans-serif" font-size="18" font-weight="bold" letter-spacing="8" fill="#fff" opacity=".7">AFTER HOURS</text>
+ <text x="1106" y="796" font-family="Arial,sans-serif" font-weight="bold" font-size="24" letter-spacing="8" fill="#fff" opacity=".55">ALL GAME / NO LIMITS</text>
+ <text x="1490" y="156" font-family="Arial,sans-serif" font-weight="900" font-size="100" text-anchor="end" fill="#ffc46d" opacity=".19">03</text>
+ </svg>

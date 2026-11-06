@@ -1,0 +1,86 @@
+/* AUVRYKO • V9 real-photography showcase.
+   Product images are editorial photographs (hosted on Unsplash / Wikimedia).
+   No simulated 360-degree views or mismatched shoes presented as alternate angles. */
+:root{--photoline:rgba(19,44,30,.14);--photoglass:rgba(249,251,243,.88)}
+:root[data-theme=dark]{--photoline:rgba(231,245,224,.2);--photoglass:rgba(18,30,23,.85)}
+/* Real photography gets art direction from framing, never a tilted SVG pseudo-product. */
+.shoe-visual{background:#e7e9e3!important;isolation:isolate;overflow:hidden;position:relative}
+.shoe-visual:before{background:linear-gradient(138deg,transparent 25%,#ffffff37 48%,transparent 79%)}
+.shoe-visual:after{content:'PHOTO STUDY';font:900 60px 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.04em;bottom:9%;right:1%;opacity:.08;white-space:nowrap}
+.shoe-visual img{object-fit:cover!important;width:100%;height:100%;position:absolute;inset:0;transform:none!important;filter:none!important;transition:transform .6s cubic-bezier(.25,.65,.15,1),filter .4s}
+.shoe-card:hover .shoe-visual img{transform:scale(1.09)!important;filter:contrast(1.03)!important}
+.shoe-tag{background:#fffdf2eb!important;border-radius:4px;padding:7px 9px!important;backdrop-filter:blur(8px);box-shadow:0 2px 10px #00000011;z-index:3}
+.shoe-arrow{background:#d7f39c;color:#193122;border:1px solid #bdd280;border-radius:5px;font-size:10px;letter-spacing:.07em;font-weight:900;width:auto;padding:0 11px;height:36px;z-index:4;transition:background .2s,transform .2s}
+.shoe-card:hover .shoe-arrow{background:#fff;transform:translateX(3px)}
+.photo-id{display:none}
+.save-pair{z-index:5}
+.shoe-meta{padding:17px 14px 20px;min-height:91px}
+.shoe-card{overflow:hidden}
+/* Home studio editorial uses real shoes without animated illustration tilt */
+.drop-story-art{background:radial-gradient(circle at 55% 52%,#dae9c7,#9dcbb0)}
+.drop-story-art:before{opacity:.4;z-index:1}
+.drop-art-graphic img.editorial-real-photo{position:absolute;inset:0;width:100%;height:100%;max-height:none;object-fit:cover;object-position:center;transform:none;animation:none;filter:contrast(1.08) saturate(.97)}
+.drop-orbit{display:none}
+.drop-eyebrow,.drop-footnote{background:#f1f8e6dd;color:#1f3929;padding:9px 10px;border-radius:3px}
+.editorial .tilt-stage img.editorial-real-photo{width:100%;height:100%;border-radius:12px;object-fit:cover;transform:translateZ(20px) rotate(-4deg);filter:drop-shadow(14px 22px 25px #0006)}
+/* The gallery is an actual photograph viewer. */
+.photo-product-page .detail-layout{grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:min(6vw,78px);padding-bottom:98px}
+.photo-gallery{min-width:0}
+.photo-stage{height:clamp(370px,49vw,635px);position:relative;overflow:hidden;border-radius:12px;background:var(--stage-tint,#e4eadc);isolation:isolate;outline-offset:4px;touch-action:pan-y;box-shadow:0 12px 32px #17271b12}
+.photo-stage:before{position:absolute;inset:0;content:'';background:linear-gradient(0deg,#17221934,transparent 18%,transparent 80%,#12271921);z-index:1;pointer-events:none}
+.photo-stage-image-wrap{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden}
+.photo-stage-image-wrap img{width:100%;height:100%;object-fit:cover;cursor:zoom-in;transition:transform .6s cubic-bezier(.25,.7,.15,1),opacity .2s}
+.photo-stage-image-wrap:not(.is-crop) img{object-position:center}
+.photo-stage-image-wrap.is-crop img{transform:scale(1.65);object-position:60% center}
+.photo-stage-image-wrap.is-extra img{transform:scale(2.25);object-position:35% 65%}
+.photo-stage-top,.photo-stage-bottom{position:absolute;left:20px;right:20px;display:flex;align-items:center;justify-content:space-between;gap:10px;z-index:2;font-weight:900;letter-spacing:.15em;font-size:9px;color:#172a20}
+.photo-stage-top{top:18px}.photo-stage-bottom{bottom:19px}
+.photo-stage-top span,.photo-stage-bottom span{background:#f6faeeda;backdrop-filter:blur(8px);padding:8px 10px;border-radius:4px}
+.photo-previous,.photo-next{position:absolute;top:48%;height:44px;width:44px;display:grid;place-items:center;background:#f8faf2e9;border:1px solid #ffffff99;border-radius:50%;color:#1b3322;font-size:23px;z-index:3;box-shadow:0 5px 18px #0001;transition:transform .2s,background .2s}
+.photo-previous{left:15px}.photo-next{right:15px}
+.photo-previous:hover,.photo-next:hover{transform:scale(1.1);background:#d4f393}
+.photo-expand{position:absolute;right:20px;bottom:70px;z-index:3;border:1px solid #d2e7b4;color:#1b3223;background:#f9fdf5ed;padding:12px 15px;border-radius:5px;letter-spacing:.08em;font-weight:900;font-size:10px}
+.photo-expand:hover{background:#d8f49a}
+.photo-thumb-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding-top:13px}
+.photo-thumb{border:2px solid transparent;background:var(--surface-soft,#e9ece2);border-radius:8px;overflow:hidden;position:relative;min-height:130px;min-width:0;text-align:left;padding:0;transition:border .2s,transform .2s,box-shadow .2s}
+.photo-thumb.is-selected{border-color:#689a44;box-shadow:0 0 0 2px #c7e8a9}
+.photo-thumb:hover{transform:translateY(-2px)}
+.photo-thumb img{width:100%;height:127px;object-fit:cover;transition:transform .4s}
+.photo-thumb.is-crop img{transform:scale(1.5)}
+.photo-thumb.is-crop:nth-child(3) img{transform:scale(2.2);object-position:35% 67%}
+.photo-thumb span{position:absolute;left:7px;right:7px;bottom:7px;background:#fffcf1ed;color:#193323;padding:7px 8px;border-radius:3px;font-size:8px;font-weight:900;letter-spacing:.055em;line-height:1.25}
+.photo-disclosure{font-size:11px;line-height:1.65;color:var(--muted);margin:13px 0 0;max-width:660px}
+.photo-product-page .detail-body{padding-top:22px}
+.photo-product-page .detail-body h1{font-size:clamp(67px,7vw,112px);line-height:.87}
+.product-proof{margin:18px 0 24px;display:flex;align-items:center;gap:7px;font-size:9px;font-weight:900;letter-spacing:.12em;color:var(--muted);flex-wrap:wrap}
+.product-proof-circle{color:#7eae55}
+.photo-help{margin-top:25px;border-top:1px solid var(--line);padding-top:15px;max-width:480px}
+.photo-help strong{font-size:10px;letter-spacing:.11em}
+.photo-help p{font-size:12px;line-height:1.6;color:var(--muted)}
+/* Accessible native fullscreen lightbox with zoom and keyboard arrows */
+.photo-lightbox{position:fixed;inset:0;width:min(1220px,96vw);height:min(880px,95dvh);max-width:none;max-height:none;border:0;border-radius:14px;background:var(--surface,#fbfaf2);color:var(--ink);padding:0;box-shadow:0 32px 100px #0008;overflow:hidden}
+.photo-lightbox::backdrop{background:rgba(9,15,11,.86);backdrop-filter:blur(14px)}
+.photo-lightbox-header,.photo-lightbox-footer{height:62px;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:0 24px;font-size:10px;font-weight:900;letter-spacing:.12em}
+.photo-lightbox-header{border-bottom:1px solid var(--line)}.photo-lightbox-footer{border-top:1px solid var(--line)}
+.photo-lightbox-header button,.photo-lightbox-footer button{background:transparent;border:1px solid var(--line);border-radius:5px;padding:10px 15px;color:inherit;font-weight:900;font-size:10px}
+.photo-lightbox-stage{height:calc(100% - 124px);display:grid;grid-template-columns:58px minmax(0,1fr) 58px;align-items:center;justify-items:center;padding:12px;gap:7px;overflow:hidden}
+.photo-lightbox-stage img{max-width:100%;max-height:100%;height:100%;object-fit:contain;border-radius:6px;transition:transform .25s;min-width:0}
+.photo-lightbox-stage img.is-crop{object-fit:cover;max-width:min(75vw,1000px);width:100%}
+.photo-lightbox.is-zoomed .photo-lightbox-stage img{transform:scale(1.45);cursor:zoom-out}
+.photo-lightbox-stage button{border:0;border-radius:50%;background:var(--brand-highlight,#d1ed96);color:#112b1a;width:48px;height:48px;font-size:25px;z-index:3}
+img.photo-unavailable{opacity:0!important}
+/* Signal a missing remote photograph without restoring cartoon silhouettes. */
+.shoe-visual:has(>img.photo-unavailable):after,.photo-stage:has(img.photo-unavailable):after,.photo-thumb:has(img.photo-unavailable):after{content:'PHOTO UNAVAILABLE • INTERNET REQUIRED';position:absolute;inset:0;display:grid;place-items:center;padding:30px;text-align:center;font:900 12px 'DM Sans',sans-serif;letter-spacing:.09em;color:#486054;background:linear-gradient(135deg,#e5ede2,#d9e7d4)}
+.photo-stage:has(img.photo-unavailable):after{z-index:0}
+.photo-thumb:has(img.photo-unavailable):after{font-size:8px;padding:5px}
+:root[data-theme=dark] .shoe-visual{background:#27392d!important}
+:root[data-theme=dark] .photo-stage{box-shadow:0 12px 35px #0004}
+:root[data-theme=dark] .photo-stage:has(img.photo-unavailable):after{color:#d5e6c5;background:linear-gradient(135deg,#263c2c,#192b20)}
+@media(max-width:950px){.photo-product-page .detail-layout{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5%}.photo-stage{height:480px}.photo-thumb{min-height:110px}.photo-thumb img{height:110px}}
+@media(max-width:720px){.photo-product-page .detail-layout{grid-template-columns:1fr;gap:24px}.photo-stage{height:clamp(340px,96vw,580px)}.photo-product-page .detail-body{padding:4px 0 0}.photo-thumb-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:9px;padding:11px 2px 4px}.photo-thumb{flex:0 0 34%;min-height:106px;scroll-snap-align:start}.photo-thumb img{height:106px}.photo-stage-bottom span:last-child{display:none}.photo-expand{bottom:60px;padding:9px}.photo-lightbox{width:100vw;height:100dvh;border-radius:0}.photo-lightbox-header,.photo-lightbox-footer{padding:0 14px}.photo-lightbox-stage{grid-template-columns:40px minmax(0,1fr) 40px;padding:8px}.photo-lightbox-stage button{width:37px;height:37px}.photo-disclosure{font-size:10px}.shoe-visual{min-height:166px}}
+@media(max-width:380px){.photo-stage{height:350px}.photo-stage-top,.photo-stage-bottom{left:9px;right:9px;font-size:7px}.photo-previous,.photo-next{width:36px;height:36px}.photo-thumb{flex-basis:42%}.shoe-visual{min-height:144px}.shoe-meta{padding:13px 9px 15px}}
+@media(prefers-reduced-motion:reduce){.shoe-visual img,.photo-stage-image-wrap img,.photo-lightbox-stage img{transition:none!important}.photo-thumb{transition:none!important}}
+/* Keep modal cart + account controls above the sticky navigation during scroll. */
+#overlay{z-index:1150!important}
+#cartDrawer{z-index:1160!important;isolation:isolate}
+#authModal{z-index:1170!important}

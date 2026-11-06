@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f2ec">
+  <meta name="description" content="Browse 36 photographed shoe concepts across running, training, court, outdoor and everyday categories. Explore the AUVRYKO storefront portfolio.">
+  <title>AUVRYKO V15 — Move your way</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/v6.css">
+  <link rel="stylesheet" href="/v7.css">
+  <link rel="stylesheet" href="/v8.css">
+  <link rel="stylesheet" href="/v9-photos.css">
+  <link rel="stylesheet" href="/v10-gallery.css">
+  <link rel="stylesheet" href="/v11-responsive.css">
+  <link rel="stylesheet" href="/v12-polish.css">
+  <link rel="stylesheet" href="/v13-shop.css">
+  <link rel="stylesheet" href="/v14-release.css">
+  <link rel="stylesheet" href="/v15-final.css">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <meta property="og:title" content="AUVRYKO — Find your movement">
+  <meta property="og:description" content="Thoughtful athletic footwear for running, training, the court and everyday life.">
+  <script src="/theme-init.js"></script>
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#app">Skip to content</a>
+  <div class="topline" aria-label="Store information">
+    <span><i class="topline-pulse" aria-hidden="true"></i> BUILT FOR ALL KINDS OF MOVEMENT</span>
+    <span>FREE SHIPPING ABOVE ₹3,999 <span class="topline-dot">✳</span> COD AVAILABLE</span>
+  </div>
+  <header class="header" id="siteHeader">
+    <a href="#/" class="logo" id="brandHome" aria-label="AUVRYKO — Home">AUVRYKO<span class="mark">✦</span><span class="logo-sub">PERFORMANCE GOODS · V15</span></a>
+    <button type="button" class="menu-toggle" id="menuButton" aria-controls="primaryNav" aria-expanded="false" aria-label="Open navigation"><span class="menu-icon" aria-hidden="true"><i></i><i></i></span><span class="menu-label">MENU</span></button>
+    <nav id="primaryNav" aria-label="Main navigation">
+      <a href="#/" data-nav="home">HOME<span class="nav-active-dot" aria-hidden="true"></span></a>
+      <a href="#/shop" data-nav="shop">SHOP ALL<span class="nav-active-dot" aria-hidden="true"></span></a>
+      <a href="#/shop?category=Running" data-nav="Running">RUNNING</a>
+      <a href="#/shop?category=Training" data-nav="Training">TRAINING</a>
+      <a href="#/shop?category=Basketball" data-nav="Basketball">COURT</a>
+      <a href="#/shop?category=Lifestyle" data-nav="Lifestyle">EVERYDAY</a>
+      <button type="button" class="mobile-account-link" id="mobileAccountAction">ACCOUNT / SIGN IN <span aria-hidden="true">↗</span></button>
+    </nav>
+    <div class="header-actions">
+      <a href="#/orders" id="ordersLink" data-nav="orders">ORDERS</a>
+      <button type="button" id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false" title="Change color theme"><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">DARK</span></button>
+      <button type="button" id="accountButton" aria-label="Open account">ACCOUNT</button>
+      <button type="button" id="cartButton" class="bag" aria-label="Open shopping bag">BAG <span id="cartCount">0</span></button>
+    </div>
+    <div class="header-motion" aria-hidden="true"></div>
+  </header>
+  <div class="route-strip" id="routeStrip" aria-live="polite"><span class="strip-kicker">CURRENTLY EXPLORING</span><span id="routeStripLabel">HOME / THE MOVEMENT DEPARTMENT</span><span class="strip-end">EST. IN MOTION · 2026</span></div>
+  <main id="app" tabindex="-1" aria-live="polite"></main>
+  <footer class="footer compact-footer v12-footer" id="footer"><div class="footer-main"><div class="footer-brand"><a href="#/" class="footer-logo">AUVRYKO<span>✦</span></a><p>Everyday movement starts with the right pair.</p><span class="footer-note">Independent footwear storefront portfolio project.</span></div><div class="footer-section"><h2>SHOP</h2><a href="#/shop">All shoes</a><a href="#/shop?category=Running">Running</a><a href="#/shop?category=Training">Training</a><a href="#/shop?category=Lifestyle">Everyday</a></div><div class="footer-section"><h2>YOUR ACCOUNT</h2><a href="#/orders">Orders</a><a href="#/shop?collection=saved">Saved shoes</a><a href="#/shop?collection=new">New arrivals</a></div></div><div class="footer-bottom-line"><span>© 2026 AUVRYKO · V15 · Portfolio concept; no real deliveries.</span><span><a href="/photo-credits.html" target="_blank" rel="noopener">Photography credits</a> · Designed for movement.</span></div></footer>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+  <dialog id="photoLightbox" class="photo-lightbox" aria-label="Expanded product photography">
+    <div class="photo-lightbox-header"><span>AUVRYKO / THE PHOTO STUDIO</span><button type="button" id="lightboxClose" aria-label="Close photo viewer">✕ CLOSE</button></div>
+    <div class="photo-lightbox-stage"><button type="button" id="lightboxPrev" aria-label="Previous photograph">←</button><div class="photo-pan-viewport" id="photoPanViewport" aria-label="Zoomable photograph. Scroll or drag when enlarged"><div class="photo-pan-canvas"><img id="lightboxImage" alt="Expanded product photograph" data-photo-fallback="true"></div></div><button type="button" id="lightboxNext" aria-label="Next photograph">→</button></div>
+    <div class="photo-lightbox-footer"><span id="lightboxLabel" aria-live="polite">01 / PRODUCT PHOTO</span><span class="lightbox-hint">SCROLL TO PAN WHEN ZOOMED</span>
+    <div class="zoom-dock" role="group" aria-label="Fullscreen photo zoom controls"><span class="zoom-dock-title">ZOOM</span><button type="button" data-gallery-zoom="out" aria-label="Zoom out">−</button><output class="zoom-percent" id="lightboxZoomPercent" aria-live="polite">100%</output><button type="button" data-gallery-zoom="in" aria-label="Zoom in">+</button><button type="button" data-gallery-zoom="reset" class="zoom-reset" aria-label="Reset zoom to 100 percent">RESET</button></div></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="cartDrawer" class="drawer" aria-label="Your shopping bag" aria-modal="true" role="dialog" hidden></aside>
+  <div id="authModal" class="auth-shell" role="dialog" aria-modal="true" aria-label="Your account" hidden></div>
+</body>
+</html>

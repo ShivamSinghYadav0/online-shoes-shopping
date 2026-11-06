@@ -1,0 +1,178 @@
+html.route-switching{scroll-behavior:auto!important}
+/* AUVRYKO V11 — responsive commerce layout / accessible true-size photo studio */
+:root{--ui-gutter:clamp(16px,3.2vw,48px)}
+html,body{width:100%;max-width:100%;overflow-x:clip}
+body{font-size:14px;line-height:1.5}
+#app{min-width:0}
+button,a,input,select{touch-action:manipulation}
+.page{max-width:1600px;margin-inline:auto;padding-inline:var(--ui-gutter)}
+.header{padding-inline:var(--ui-gutter)}
+.route-strip{padding-inline:var(--ui-gutter)}
+/* Home: genuine shoe studio image, no giant athlete's legs or giant foot behind the headline. */
+.home-hero{height:clamp(580px,calc(100svh - 145px),760px)!important;min-height:560px!important;max-height:800px;overflow:hidden;background:radial-gradient(ellipse at 78% 36%,#34543e 0%,#1d342b 38%,#101f19 85%)!important}
+.home-hero:before{z-index:0!important;background:linear-gradient(90deg,#102219e8 0%,#11261dd6 38%,transparent 71%)!important}
+.home-hero:after{z-index:0!important;opacity:.09!important}
+.hero-slides,.hero-motion-mark,.hero-edge-note{display:none!important}
+.home-hero .hero-text{position:relative;z-index:3;padding:clamp(54px,7vh,90px) 0 120px var(--ui-gutter)!important;width:60%;max-width:740px}
+.home-hero .display{font-size:clamp(68px,8vw,122px)!important;line-height:.85;letter-spacing:-.03em;margin:26px 0 21px!important}
+.home-hero .hero-text>p{font-size:clamp(13px,1.15vw,16px);line-height:1.55;max-width:470px}
+.home-hero .hero-bottom{left:var(--ui-gutter);right:var(--ui-gutter);bottom:20px;z-index:5}
+.hero-scroll-label{z-index:3}
+.hero-sneaker-panel{position:absolute;z-index:2;right:clamp(30px,5%,95px);top:11%;width:min(45vw,590px);height:72%;display:grid;place-items:center;isolation:isolate;--hero-shoe-accent:#f76945}
+.hero-sneaker-orbit{position:absolute;inset:7%;border:1px solid #d5f4aa59;border-radius:50%;animation:auvrykoOrbit 28s linear infinite}
+.hero-sneaker-orbit:after,.hero-sneaker-orbit:before{content:'';position:absolute;border:1px dashed #d5f4aa40;border-radius:50%;inset:14%}
+.hero-sneaker-orbit:after{inset:28%;border-style:solid}
+.hero-sneaker-card{position:relative;width:84%;max-width:490px;transform:rotate(-5deg);animation:auvrykoShoeFloat 5.4s ease-in-out infinite;filter:drop-shadow(15px 30px 22px #040d0ba1)}
+.shoe-photo-frame{overflow:hidden;background:var(--hero-shoe-accent);aspect-ratio:1.23;border-radius:24px;box-shadow:0 32px 65px #0006;outline:9px solid #d9faad13;transition:background .35s}
+.shoe-photo-frame img{width:100%;height:100%;object-fit:contain;object-position:center;mix-blend-mode:normal}
+.shoe-feature-label{position:absolute;left:14px;bottom:14px;padding:9px 13px;background:#f6f9ee;color:#182a22;border-radius:5px;font-size:10px;font-weight:900;letter-spacing:.1em}
+.shoe-feature-number{position:absolute;right:6px;top:-27px;color:#d4e3cd;text-shadow:0 2px 10px #101d1880;font-size:10px;letter-spacing:.18em;font-weight:900}
+.hero-sneaker-decor{position:absolute;right:-1%;bottom:-5%;font:900 clamp(55px,9vw,140px)/1 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.07em;color:#d0f6aa0d;z-index:-1}
+@keyframes auvrykoOrbit{to{transform:rotate(360deg)}}
+@keyframes auvrykoShoeFloat{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-17px) rotate(-2deg)}}
+/* Catalogue: content-first, no poster-size repeated header on each category. */
+.shop-page{padding-top:24px!important}
+.shop-header-compact{padding:18px 0 18px!important;margin:0 0 16px!important;border-radius:0!important;min-height:0!important}
+.shop-header-meta{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.shop-home-link{color:var(--muted);font-size:10px;font-weight:900;letter-spacing:.09em}
+.shop-page .catalog-title{font:900 clamp(37px,4.6vw,67px)/1.02 'Barlow Condensed',Impact,sans-serif!important;letter-spacing:-.015em!important;text-transform:uppercase;margin:14px 0 5px!important;max-width:100%;overflow-wrap:break-word}
+.catalog-subtitle{font-size:clamp(12px,1.2vw,15px);color:var(--muted);margin:0 0 3px;line-height:1.55}
+.shop-page .shop-controls{margin-top:10px;gap:16px;align-items:center;display:flex;justify-content:space-between}
+.shop-page .filters{display:flex;flex-wrap:wrap;gap:7px}
+.shop-page .chip{padding:9px 13px;border-radius:100px;font-size:11px;min-height:40px}
+.shop-page .shop-tools{flex-wrap:wrap;justify-content:flex-end}
+.shop-page .search-wrap,.shop-page .sort-wrap{height:42px}
+.shop-page .search-wrap .search{width:145px;min-width:120px;padding:9px 5px}
+.shop-result-line{display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid var(--line);padding:16px 0;margin-top:16px}
+.shop-result-line .overline{margin:0!important}
+.shop-delivery-note{font-size:9px;font-weight:850;letter-spacing:.04em;color:var(--muted)}
+.shop-page .product-grid{margin-top:4px;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,2vw,25px)}
+.shop-page .shoe-visual{min-height:0}
+.shop-page .shoe-meta{min-width:0}
+.shop-page .shoe-meta strong{overflow-wrap:anywhere}
+.catalog-bottom{display:none!important}
+/* Product page: contain photo on laptops without browser zoom adjustment. */
+.photo-product-page{padding-top:18px!important}
+.photo-product-page .detail-layout{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,.92fr);align-items:start;gap:clamp(22px,4vw,62px)}
+.photo-product-page .detail-body{min-width:0}
+.photo-product-page .detail-body h1{font-size:clamp(44px,5.1vw,82px)!important;line-height:.98!important}
+.photo-product-page .photo-stage{height:auto!important;aspect-ratio:1.23;max-height:560px;min-height:280px}
+.photo-product-page .photo-stage-image-wrap img{object-fit:contain!important;transform:scale(var(--gallery-zoom,1))!important}
+.photo-product-page .photo-tools-row{margin-top:5px}
+.photo-product-page .photo-thumb-row{gap:9px}
+.photo-product-page .photo-thumb{min-width:0}
+.photo-product-page .photo-thumb img{height:clamp(70px,9vw,110px)}
+/* Modal: 100% photo fits into the available stage in every viewport size.
+   Zoom changes canvas dimensions, providing real scrolling / touch panning. */
+.photo-lightbox[open]{display:grid!important;grid-template-rows:auto minmax(0,1fr) auto!important;grid-template-columns:minmax(0,1fr);width:min(1080px,calc(100vw - 30px))!important;height:min(740px,calc(100dvh - 30px))!important;max-width:none!important;max-height:none!important;margin:auto!important;border:0!important;padding:0!important;overflow:hidden!important;border-radius:16px}
+.photo-lightbox-header{height:auto!important;min-height:55px!important;padding:10px 20px!important;display:flex;align-items:center;min-width:0}
+.photo-lightbox-header button{flex-shrink:0;padding:9px 14px!important}
+.photo-lightbox-stage{height:auto!important;min-height:0!important;max-height:none!important;position:relative!important;display:block!important;padding:0!important;overflow:hidden!important;background:var(--surface,#fafaf4)!important}
+.photo-pan-viewport{position:absolute;inset:13px 65px;min-width:0;min-height:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#9bab93 transparent;touch-action:pan-x pan-y;cursor:default}
+.photo-pan-viewport.is-dragging{cursor:grabbing;user-select:none}
+.photo-pan-canvas{width:calc(100% * var(--gallery-zoom,1));height:calc(100% * var(--gallery-zoom,1));min-width:100%;min-height:100%;display:grid;place-items:center;margin:auto}
+.photo-pan-canvas img,.photo-lightbox-stage img{display:block;width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;min-height:0!important;min-width:0!important;object-fit:contain!important;object-position:center!important;transform:none!important;border-radius:0!important}
+.photo-lightbox-stage>button{position:absolute!important;z-index:3;top:50%;transform:translateY(-50%);width:43px!important;height:43px!important;padding:0!important;display:grid;place-items:center}
+.photo-lightbox-stage #lightboxPrev{left:14px}
+.photo-lightbox-stage #lightboxNext{right:14px}
+.photo-lightbox-stage:has(button[hidden]) .photo-pan-viewport{left:13px;right:13px}
+.photo-lightbox-footer{height:auto!important;min-height:60px!important;padding:10px 18px!important;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.photo-lightbox-footer .zoom-dock{margin-left:auto}
+.lightbox-hint{font-size:9px;font-weight:850;letter-spacing:.08em;color:var(--muted)}
+.zoom-dock{max-width:100%}
+/* Replaced oversized promo/footer with standard readable ecommerce footer. */
+.compact-footer{padding:45px var(--ui-gutter) 18px!important;background:#14231a;color:#e8f1e5}
+.footer-main{width:min(100%,1440px);margin:auto;display:grid;grid-template-columns:minmax(240px,2.4fr) repeat(3,minmax(120px,1fr));gap:clamp(24px,3vw,50px)}
+.footer-logo{font:900 33px/.95 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.03em;color:#fff}
+.footer-logo span{color:#d2f099;margin-left:4px}
+.footer-brand p{margin:18px 0 12px;max-width:315px;font-size:13px;line-height:1.65;color:#becdbb}
+.footer-note{font-size:10px;color:#91a991}
+.footer-section{display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.footer-section h2{font-size:11px;color:#d8f49e;letter-spacing:.13em;margin:0 0 9px}
+.footer-section a{font-size:13px;color:#d0dfce;transition:color .18s}
+.footer-section a:hover{color:#d8f49e;text-decoration:underline;text-underline-offset:3px}
+.footer-bottom-line{max-width:1440px;margin:40px auto 0;padding-top:15px;border-top:1px solid #66786760;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:10px;color:#b9c9b7;letter-spacing:.03em}
+@media(max-width:1170px){
+ .home-hero{max-height:675px}
+ .home-hero .hero-text{width:55%}
+ .home-hero .display{font-size:clamp(66px,8vw,98px)!important}
+ .hero-sneaker-panel{right:2%;width:48vw}
+ .shop-page .shop-controls{align-items:stretch;flex-direction:column}
+ .shop-page .shop-tools{justify-content:flex-start}
+ .shop-page .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .photo-product-page .detail-layout{gap:24px}
+}
+@media(max-width:800px){
+ .home-hero{height:clamp(680px,94svh,780px)!important;min-height:640px!important;max-height:none!important}
+ .home-hero .hero-text{width:100%;max-width:610px;padding:55px var(--ui-gutter) 0!important}
+ .home-hero .display{font-size:clamp(68px,11vw,97px)!important;margin:13px 0!important}
+ .home-hero .hero-text>p{max-width:370px;margin-top:8px}
+ .hero-sneaker-panel{width:min(65vw,420px);height:44%;right:6%;top:49%;opacity:.97}
+ .home-hero:before{background:linear-gradient(180deg,#102219f2 0%,#102219b0 57%,transparent 87%)!important}
+ .home-hero .hero-bottom{bottom:16px}
+ .hero-scroll-label,.hero-campaign-tag{display:none!important}
+ .photo-product-page .detail-layout{grid-template-columns:1fr;gap:25px}
+ .photo-product-page .photo-stage{aspect-ratio:1.35;max-height:530px}
+ .photo-product-page .detail-body h1{font-size:clamp(49px,9vw,76px)!important}
+ .shop-page .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .footer-main{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .footer-brand{grid-column:1/-1}
+ .photo-lightbox[open]{width:100vw!important;height:100dvh!important;border-radius:0!important}
+ .photo-lightbox-stage>button{width:36px!important;height:36px!important}
+ .photo-lightbox-stage #lightboxPrev{left:7px}
+ .photo-lightbox-stage #lightboxNext{right:7px}
+ .photo-pan-viewport{inset:8px 42px}
+ .photo-lightbox-stage:has(button[hidden]) .photo-pan-viewport{inset:8px}
+ .photo-lightbox-footer{justify-content:center;padding:10px!important}
+ .photo-lightbox-footer #lightboxLabel{width:100%;text-align:center}
+ .lightbox-hint{display:none}
+ .photo-lightbox-footer .zoom-dock{margin-inline:auto}
+}
+@media(max-width:540px){
+ .home-hero{height:min(780px,calc(100svh - 80px))!important;min-height:600px!important}
+ .home-hero .hero-text{padding-top:36px!important}
+ .home-hero .display{font-size:clamp(65px,17vw,92px)!important}
+ .home-hero .hero-text>p{font-size:12px;line-height:1.55;max-width:315px}
+ .home-hero .hero-ctas{margin-top:15px}
+ .home-hero .btn{padding:13px 15px!important}
+ .hero-sneaker-panel{width:78vw;height:37%;top:53%;right:8%}
+ .hero-sneaker-card{width:83%}
+ .shoe-photo-frame{border-radius:14px}
+ .shoe-feature-label{font-size:8px;bottom:8px;left:8px}
+ .shop-page{padding-top:9px!important}
+ .shop-header-compact{padding:15px 0 12px!important}
+ .shop-page .catalog-title{font-size:clamp(39px,11vw,58px)!important}
+ .shop-page .chip{font-size:10px;padding:9px 12px;min-height:39px}
+ .shop-page .filters{gap:6px}
+ .shop-page .shop-tools{display:grid;grid-template-columns:1fr;gap:8px}
+ .shop-page .search-wrap,.shop-page .sort-wrap{width:100%;min-width:0;justify-content:space-between}
+ .shop-page .search-wrap .search{width:100%;min-width:0}
+ .shop-result-line{margin-top:14px;gap:6px}
+ .shop-delivery-note{display:none}
+ .shop-page .product-grid{gap:10px}
+ .shop-page .shoe-visual{aspect-ratio:.94;min-height:0}
+ .shop-page .shoe-meta strong{font-size:13px}
+ .shop-page .shoe-meta small{font-size:10px}
+ .shop-page .shoe-meta .amount{font-size:12px}
+ .photo-product-page .photo-stage{aspect-ratio:1.07;min-height:255px}
+ .photo-product-page .detail-body h1{font-size:57px!important}
+ .photo-stage-top span{font-size:8px}
+ .footer-main{grid-template-columns:repeat(2,minmax(0,1fr));gap:29px 14px}
+ .footer-brand{grid-column:1/-1}
+ .footer-section:last-child{grid-column:1/-1}
+ .footer-bottom-line{flex-direction:column;gap:6px;margin-top:28px}
+ .photo-lightbox-header{min-height:53px!important;padding:8px 13px!important;font-size:9px}
+ .photo-lightbox-footer{min-height:102px!important}
+ .photo-lightbox-stage{min-height:0!important}
+}
+@media(max-width:370px){
+ .home-hero .display{font-size:62px!important}
+ .hero-sneaker-panel{top:55%;height:31%}
+ .home-hero .hero-bottom .hero-slide-info div{display:none}
+ .zoom-dock{gap:3px}
+ .photo-lightbox-footer{padding:7px!important}
+ .photo-lightbox-header button{font-size:9px;padding:8px!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-sneaker-card,.hero-sneaker-orbit{animation:none!important}
+}

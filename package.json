@@ -1,0 +1,14 @@
+{
+  "name": "auvryko-footwear-studio",
+  "version": "1.6.0",
+  "private": true,
+  "description": "AUVRYKO V15 \u2014 responsive portfolio footwear storefront, real photo gallery and Node.js COD demo backend",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node --check server.js && node --check public/app.js && node --check catalog.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

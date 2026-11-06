@@ -1,0 +1,76 @@
+/* AUVRYKO V15 — viewport-safe clean storefront, loaded after all legacy layers. */
+:root{--v15-container:1380px;--v15-gutter:clamp(16px,3.6vw,52px)}
+*,*::before,*::after{box-sizing:border-box}
+html{overflow-x:clip;scroll-padding-top:86px}
+body{min-width:0;max-width:100%;overflow-x:clip}
+#app{min-width:0;width:100%}
+/* V11 promotional ticker / giant category strip are deprecated; the V12+ shop-by-activity cards replace them. */
+.marquee-band,.marquee-track,.marquee,.quick-categories,.legacy-hero-banner{display:none!important}
+/* Fit the main photo, calls to action and controls inside the available viewport width. */
+.home-hero.v12-home-hero{overflow:hidden!important;padding-inline:var(--v15-gutter)!important}
+.v12-hero-shell{width:100%;max-width:var(--v15-container);min-width:0;gap:clamp(14px,2.4vw,32px) clamp(18px,3vw,44px)}
+.home-hero .v12-hero-copy,.home-hero .v12-hero-visual{min-width:0;max-width:100%}
+.home-hero .v12-hero-title{font-size:clamp(55px,6vw,92px)!important;line-height:.95!important}
+.v12-hero-copy p{max-width:38ch!important}
+.v12-hero-ctas{gap:12px 18px}
+.v12-primary-button{min-width:0;white-space:normal;text-align:left;line-height:1.2;padding:14px 17px;gap:16px}
+.v12-secondary-button{white-space:normal}
+.home-hero .v12-hero-visual{aspect-ratio:1.28;overflow:visible!important;padding:clamp(7px,1.5vw,20px)}
+.v12-shoe-art{width:min(94%,510px);aspect-ratio:1.33;max-height:430px;transform:rotate(-2deg);overflow:hidden}
+.v12-shoe-art img{display:block;width:100%;height:100%;object-fit:contain!important;object-position:center!important;transform:none!important}
+.v12-photo-aura{inset:8%}
+.v12-visual-label{bottom:0;left:5%;right:5%}
+.home-hero .v12-hero-controls{margin:0!important;flex-wrap:wrap!important;row-gap:12px!important}
+/* Shorter category and newsletter sections with consistent spacing rather than giant ad banners. */
+.v12-category-section{max-width:calc(var(--v15-container) + 2 * var(--v15-gutter));padding:clamp(26px,3.2vw,46px) var(--v15-gutter)!important}
+.v12-section-header{margin-bottom:clamp(12px,1.5vw,20px)}
+.v12-category-grid{gap:clamp(10px,1.2vw,18px)}
+.v12-category-photo{aspect-ratio:1.42}
+.v12-editorial{max-width:var(--v15-container);margin-bottom:clamp(24px,3vw,40px)!important}
+.v12-editorial-photo{min-height:220px!important}
+.v12-editorial-copy{padding:clamp(22px,3vw,42px)}
+.v12-service-strip{max-width:var(--v15-container);margin-bottom:clamp(20px,2.5vw,35px)!important}
+/* Equal spacing across all six category pages and product routes. */
+.shop-page-v13{max-width:calc(var(--v15-container) + 2 * var(--v15-gutter));padding-inline:var(--v15-gutter)!important}
+.shop-page-v13 .shop-header-v13{margin-bottom:10px!important;padding-bottom:12px!important}
+.shop-page-v13 .shop-controls-v13{padding:8px 0!important}
+.shop-page-v13 .product-grid{padding-bottom:0!important}
+.photo-product-page .detail-layout{min-width:0}
+.photo-product-page .photo-gallery,.photo-product-page .detail-body{min-width:0}
+.photo-product-page .photo-stage img{max-width:100%;object-fit:contain}
+.footer.compact-footer.v12-footer{padding-top:clamp(20px,2.8vw,34px)!important}
+.v12-footer .footer-main{max-width:var(--v15-container)}
+@media(max-width:1100px){
+ .home-hero .v12-hero-title{font-size:clamp(53px,6.4vw,77px)!important}
+ .v12-hero-shell{grid-template-columns:minmax(0,1fr) minmax(0,.95fr)}
+ .v12-hero-copy p{font-size:13px!important}
+ .v12-hero-caption{margin-top:20px}
+}
+@media(max-width:760px){
+ .v12-hero-shell{grid-template-columns:minmax(0,1fr)!important;grid-template-areas:'copy' 'visual' 'controls'!important;gap:12px}
+ .home-hero .v12-hero-copy{padding:9px 0 2px!important}
+ .home-hero .v12-hero-title{font-size:clamp(55px,11vw,80px)!important}
+ .home-hero .v12-hero-visual{aspect-ratio:1.8;overflow:hidden!important;max-height:330px;padding:6px!important}
+ .v12-shoe-art{width:min(76%,390px);aspect-ratio:1.48;max-height:280px}
+ .v12-category-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .v12-category-photo{aspect-ratio:1.6}
+ .v12-editorial{margin-inline:var(--v15-gutter)}
+ .v12-service-strip{margin-inline:var(--v15-gutter)}
+}
+@media(max-width:480px){
+ .home-hero .v12-hero-title{font-size:clamp(49px,12.8vw,65px)!important}
+ .home-hero .v12-hero-visual{aspect-ratio:1.57;max-height:245px}
+ .v12-shoe-art{width:min(79%,340px);max-height:215px}
+ .v12-hero-ctas{align-items:flex-start;gap:8px 12px}
+ .v12-hero-controls .v12-slider-controls{gap:6px!important}
+ .v12-category-photo{aspect-ratio:1.1}
+ .v12-editorial-photo{min-height:170px!important}
+ .v12-editorial-copy{padding:19px}
+ .v12-section-header h2{font-size:clamp(30px,8.5vw,38px)}
+}
+@media(max-width:350px){
+ .v12-category-grid{grid-template-columns:1fr}
+ .v12-category-photo{aspect-ratio:1.75}
+ .v12-hero-controls .v12-slide-info div{display:none!important}
+}
+@media(prefers-reduced-motion:reduce){.v12-shoe-art,.v12-photo-aura{animation:none!important}}

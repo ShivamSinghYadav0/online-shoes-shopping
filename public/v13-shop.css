@@ -1,0 +1,64 @@
+/* AUVRYKO V13 — real storefront catalog compactness and responsive flow.
+   Scoped to shop only: homepage, product detail, cart and checkout remain unchanged. */
+html.is-shop-route .route-strip{display:none!important}
+.shop-page-v13{padding-top:clamp(14px,1.5vw,23px)!important;padding-bottom:clamp(32px,4vw,62px)}
+.shop-page-v13 .shop-header-v13{padding:0 0 15px!important;margin:0 0 13px!important;overflow:visible!important;border:0!important;background:transparent!important}
+.shop-page-v13 .shop-header-v13::after{content:none!important;display:none!important}
+.shop-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:9px;min-height:24px;font:600 11px/1.35 'DM Sans',sans-serif;color:var(--muted);letter-spacing:.01em}
+.shop-breadcrumb a{color:var(--muted);text-decoration:none}
+.shop-breadcrumb a:hover{text-decoration:underline;text-underline-offset:3px;color:var(--ink)}
+.shop-breadcrumb [aria-current="page"]{font-weight:800;color:var(--ink)}
+.shop-breadcrumb>span[aria-hidden]{opacity:.55}
+.shop-heading-row{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;padding-top:clamp(7px,1vw,13px)}
+.shop-heading-copy{min-width:0}
+.shop-page-v13 .catalog-title{font:900 clamp(36px,4vw,57px)/.96 'Barlow Condensed',Impact,sans-serif!important;letter-spacing:-.015em!important;margin:0 0 6px!important;text-transform:uppercase;max-width:none!important}
+.shop-page-v13 .catalog-subtitle{font:400 clamp(12px,1.05vw,14px)/1.4 'DM Sans',sans-serif!important;color:var(--muted);margin:0!important}
+.shop-count-badge{flex:none;display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--line);border-radius:99px;padding:9px 12px;background:var(--surface-raised,#fff);font-size:10px;font-weight:800;white-space:nowrap;letter-spacing:.045em;color:var(--ink)}
+.shop-count-badge:before{content:'';width:6px;height:6px;background:#79a34d;border-radius:50%;flex:none}
+.shop-page-v13 .shop-controls-v13{display:flex;flex-wrap:nowrap;align-items:center;gap:18px;padding:15px 0 7px!important;margin:0!important;border-top:1px solid var(--line);border-bottom:0}
+.shop-page-v13 .filters{flex:1 1 auto;min-width:0;display:flex;flex-wrap:nowrap;gap:5px;overflow-x:auto;scrollbar-width:thin;overscroll-behavior-x:contain;padding:2px 2px 6px 0}
+.shop-page-v13 .chip{white-space:nowrap;flex:0 0 auto;min-height:36px!important;padding:8px 11px!important;border-radius:50px!important;font-size:10px!important;line-height:1.2!important}
+.shop-page-v13 .shop-tools{display:flex;flex:none;gap:9px;justify-content:flex-end;align-items:center;flex-wrap:nowrap;min-width:0}
+.shop-page-v13 .search-wrap,.shop-page-v13 .sort-wrap{height:38px!important;min-height:38px!important}
+.shop-page-v13 .search-wrap{min-width:165px;width:185px}
+.shop-page-v13 .search-wrap .search{width:100%;min-width:0!important;font-size:11px}
+.shop-page-v13 .sort-wrap{min-width:135px;width:150px;padding:0 10px}
+.shop-page-v13 .sort-wrap select{min-width:0;max-width:100px}
+.shop-page-v13 .shop-result-v13{display:flex;align-items:center;gap:10px;margin:0 0 10px!important;padding:4px 0!important;border:0!important;min-height:25px}
+.shop-page-v13 .shop-result-v13 .overline{font-size:10px!important;letter-spacing:.075em;margin:0!important}
+.shop-page-v13 .shop-delivery-note{margin-left:auto;font-size:9px}
+.shop-page-v13 .product-grid{margin-top:0!important}
+.shop-page-v13 .shoe-visual{overflow:hidden}
+@media(max-width:1250px){
+ .shop-page-v13 .shop-controls-v13{flex-wrap:wrap;row-gap:8px}
+ .shop-page-v13 .filters{flex-basis:100%;width:100%}
+ .shop-page-v13 .shop-tools{margin-left:auto}
+}
+@media(max-width:760px){
+ .shop-page-v13{padding-top:12px!important}
+ .shop-page-v13 .shop-header-v13{padding-bottom:11px!important;margin-bottom:9px!important}
+ .shop-heading-row{padding-top:7px;align-items:flex-start}
+ .shop-page-v13 .catalog-title{font-size:clamp(34px,8vw,49px)!important}
+ .shop-count-badge{font-size:9px;padding:7px 9px}
+ .shop-page-v13 .shop-controls-v13{padding-top:12px!important;gap:8px}
+ .shop-page-v13 .shop-tools{width:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(115px,38%);margin:0}
+ .shop-page-v13 .search-wrap,.shop-page-v13 .sort-wrap{width:100%;min-width:0;max-width:none}
+ .shop-page-v13 .sort-wrap select{max-width:100%;font-size:10px}
+ .shop-page-v13 .shop-delivery-note{display:none}
+ .shop-page-v13 .shop-result-v13{min-height:20px;margin-bottom:8px!important}
+}
+@media(max-width:420px){
+ .shop-breadcrumb{gap:7px;font-size:10px}
+ .shop-heading-row{gap:5px;flex-wrap:wrap}
+ .shop-page-v13 .catalog-title{font-size:clamp(34px,10.5vw,44px)!important}
+ .shop-page-v13 .catalog-subtitle{font-size:12px!important}
+ .shop-count-badge{margin-top:5px}
+ .shop-page-v13 .filters{gap:5px}
+ .shop-page-v13 .chip{padding:8px 10px!important}
+ .shop-page-v13 .shop-tools{grid-template-columns:minmax(0,1fr) minmax(125px,44%)}
+ .shop-page-v13 .search-wrap .search{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){.shop-page-v13 *, .shop-page-v13 *::after{scroll-behavior:auto!important}}
+/* The available-style badge is the visible count; keep the legacy result region
+   accessible to assistive technology without repeating it visually. */
+.shop-page-v13 .shop-result-v13{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:0!important;border:0!important;overflow:hidden!important;clip:rect(0,0,0,0);white-space:nowrap!important}

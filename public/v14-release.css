@@ -1,0 +1,159 @@
+/* AUVRYKO V14 — final cross-route density and UX pass.
+   One shared spacing scale across all collections, not category-specific fixes.
+   This last layer intentionally neutralizes legacy oversized decorative elements. */
+:root{
+  --release-content:1440px;
+  --release-gutter:clamp(16px,3vw,44px);
+  --release-edge:clamp(10px,1.5vw,18px);
+  --release-radius:12px;
+  --release-gap:clamp(12px,1.5vw,22px);
+}
+html{scroll-padding-top:86px}
+body{line-height:1.45}
+/* The informational strip duplicated category/page titles and consumed vertical space. */
+.route-strip{display:none!important}
+.topline{min-height:25px;height:25px;padding-inline:var(--release-gutter);letter-spacing:.08em}
+.header{min-height:72px!important;height:72px!important;padding-inline:var(--release-gutter)!important;gap:clamp(8px,1.1vw,18px)}
+.header nav{gap:4px!important;min-width:0}
+.header nav a{font-size:10px;letter-spacing:.035em;padding:0 clamp(8px,.95vw,13px)!important;white-space:nowrap}
+.header-actions{gap:clamp(7px,1vw,14px)!important}
+.logo{font-size:clamp(25px,2.15vw,32px)}
+.header .logo-sub{font-size:8px;letter-spacing:.17em}
+.header-actions .theme-toggle{padding:8px 11px}
+.page{max-width:calc(var(--release-content) + 2 * var(--release-gutter));padding-inline:var(--release-gutter)}
+/* All shop routes share a single compact hierarchy: breadcrumb/title, controls, products. */
+.shop-page-v13{padding-top:clamp(14px,1.8vw,25px)!important;padding-bottom:clamp(24px,3vw,44px)!important;min-height:min(60vh,570px)}
+.shop-page-v13 .shop-header-v13{padding:0 0 15px!important;margin-bottom:13px!important}
+.shop-breadcrumb{font-size:11px;min-height:20px;gap:8px}
+.shop-heading-row{gap:16px;padding-top:8px;align-items:end}
+.shop-page-v13 .catalog-title{font-size:clamp(36px,3.3vw,52px)!important;line-height:1.03!important;letter-spacing:-.012em!important;margin:0 0 3px!important}
+.shop-page-v13 .catalog-subtitle{font-size:clamp(12px,1vw,14px)!important;line-height:1.45}
+.shop-count-badge{padding:8px 11px;font-size:10px;letter-spacing:.025em}
+.shop-page-v13 .shop-controls-v13{padding:12px 0 7px!important;gap:10px}
+.shop-page-v13 .filters{gap:6px;padding:2px 0 5px;scrollbar-width:thin}
+.shop-page-v13 .chip{min-height:36px!important;padding:7px 12px!important;font-size:11px!important;letter-spacing:0!important}
+.shop-page-v13 .shop-tools{gap:8px}
+.shop-page-v13 .search-wrap,.shop-page-v13 .sort-wrap{height:38px!important;min-height:38px!important}
+.shop-page-v13 .search-wrap{width:177px;min-width:155px}
+.shop-page-v13 .sort-wrap{width:152px;min-width:140px}
+.shop-page-v13 .product-grid{padding-bottom:0!important;gap:var(--release-gap)!important;row-gap:clamp(16px,2vw,25px)!important}
+/* Remove superimposed 'PHOTO STUDY' typography from every photograph. */
+.shoe-visual:after{content:none!important}
+.shoe-visual:before{background:none!important}
+.shoe-visual{min-height:0!important;aspect-ratio:1 / .9;isolation:isolate;border-radius:11px 11px 0 0!important}
+.shoe-card{border-radius:11px!important;box-shadow:0 4px 20px #17291e0b!important;transition:transform .2s ease,box-shadow .2s ease}
+.shoe-card:hover{transform:translateY(-3px)!important;box-shadow:0 12px 27px #10271d22!important}
+.shoe-visual img{object-fit:cover!important}
+.shoe-meta{min-height:77px!important;padding:13px 14px 14px!important;gap:10px}
+.shoe-meta strong{font-size:clamp(12px,1vw,15px)!important;line-height:1.35;display:block}
+.shoe-meta small{font-size:11px!important;line-height:1.3}
+.shoe-meta .amount{font-size:clamp(12px,1.1vw,15px)!important}
+.shoe-arrow{height:33px!important;font-size:10px!important;bottom:10px!important;right:10px!important}
+.shoe-tag{left:10px!important;top:10px!important;font-size:9px!important}
+.save-pair{height:34px!important;width:34px!important;right:10px!important;top:10px!important}
+.photo-angle-badge{max-width:65%}
+/* Avoid oversized detail screens and keep buying info close to the photography. */
+.photo-product-page{padding-top:12px!important}
+.photo-product-page .bread{margin:12px 0 15px!important}
+.photo-product-page .detail-layout{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(20px,3.1vw,46px);padding-bottom:clamp(30px,4vw,55px)!important}
+.photo-product-page .photo-stage{aspect-ratio:1.31;min-height:0;max-height:min(560px,65svh)}
+.photo-product-page .detail-body{padding-top:5px}
+.photo-product-page .detail-body h1{font-size:clamp(46px,4.8vw,73px)!important;line-height:.97!important;margin:13px 0 17px!important}
+.photo-product-page .photo-tools-row{gap:10px;flex-wrap:wrap}
+.photo-product-page .photo-thumb-row{margin-top:7px}
+.photo-product-page .photo-thumb{min-height:0}
+.photo-disclosure{max-width:580px;font-size:11px;line-height:1.55}
+/* Compact checkout, account and other secondary pages, avoiding giant blank zones. */
+.simple-page{padding-top:clamp(22px,3vw,48px)!important;padding-bottom:clamp(36px,4vw,65px)!important}
+.simple-page>h1{font-size:clamp(40px,5vw,75px);line-height:1!important}
+/* Footer is proportionate to the page rather than a second hero. */
+.footer.compact-footer.v12-footer{padding:26px var(--release-gutter) 11px!important}
+.v12-footer .footer-main{max-width:var(--release-content);gap:clamp(16px,3vw,36px);grid-template-columns:minmax(200px,1.8fr) repeat(2,minmax(110px,.85fr))!important}
+.v12-footer .footer-brand p{margin:9px 0 4px;font-size:12px!important}
+.v12-footer .footer-section{gap:5px!important}
+.v12-footer .footer-section h2{margin:0 0 5px!important}
+.v12-footer .footer-section a{line-height:1.5!important}
+.v12-footer .footer-bottom-line{margin-top:17px!important;padding-top:10px!important;line-height:1.5}
+/* The home still has the approved editorial direction, with restrained whitespace. */
+.home-hero.v12-home-hero{padding-inline:var(--release-gutter)!important}
+.v12-hero-shell{max-width:var(--release-content);margin-inline:auto}
+.v12-category-section{padding-top:clamp(32px,4vw,54px);padding-bottom:clamp(28px,3vw,46px)}
+.v12-section-header{margin-bottom:19px}
+.v12-editorial{margin-bottom:clamp(28px,3vw,44px)}
+.v12-service-strip{margin-bottom:clamp(22px,3vw,40px)}
+/* Screen width breakpoints are based on available space rather than devices. */
+@media (max-width:1310px){
+ .header{gap:7px}
+ .header nav a{padding:0 8px!important;font-size:9px}
+ .header-actions{gap:8px!important}
+ .shop-page-v13 .shop-controls-v13{flex-wrap:wrap}
+ .shop-page-v13 .filters{flex-basis:100%;width:100%}
+ .shop-page-v13 .shop-tools{margin-left:auto}
+}
+@media (max-width:1070px){
+ .shop-page-v13 .product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .photo-product-page .detail-layout{gap:24px}
+ .photo-product-page .detail-body h1{font-size:clamp(43px,5.2vw,58px)!important}
+}
+@media (max-width:980px){
+ .header{min-height:66px!important;height:66px!important}
+ .header nav{gap:6px!important}
+ .header nav a{font-size:12px;padding-inline:14px!important}
+ .header-actions{gap:10px!important}
+ .shop-page-v13 .shop-controls-v13{padding-top:10px!important}
+}
+@media (max-width:740px){
+ .topline{font-size:8px}
+ .topline>span:first-child{display:none}
+ .topline>span:last-child{margin:auto}
+ .header{min-height:62px!important;height:62px!important}
+ .shop-page-v13{padding-top:13px!important;min-height:0}
+ .shop-page-v13 .shop-header-v13{padding-bottom:11px!important;margin-bottom:10px!important}
+ .shop-heading-row{flex-wrap:wrap;align-items:center;gap:8px}
+ .shop-page-v13 .catalog-title{font-size:clamp(33px,7.5vw,49px)!important}
+ .shop-count-badge{font-size:9px;padding:6px 9px}
+ .shop-page-v13 .shop-tools{display:grid;grid-template-columns:minmax(0,1fr) minmax(110px,38%);width:100%;gap:8px}
+ .shop-page-v13 .search-wrap,.shop-page-v13 .sort-wrap{width:100%;min-width:0}
+ .shop-page-v13 .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px!important;row-gap:14px!important}
+ .shoe-visual{aspect-ratio:1/.97}
+ .shoe-meta{padding:11px 10px 13px!important;min-height:83px!important;flex-wrap:wrap;gap:4px}
+ .shoe-meta strong{font-size:12px!important}
+ .shoe-meta small{font-size:10px!important}
+ .shoe-meta .amount{font-size:13px!important}
+ .photo-product-page .detail-layout{grid-template-columns:minmax(0,1fr);gap:22px}
+ .photo-product-page .photo-stage{max-height:560px;aspect-ratio:1.25}
+ .photo-product-page .detail-body h1{font-size:clamp(44px,11vw,65px)!important}
+ .v12-footer .footer-main{grid-template-columns:1.2fr 1fr 1fr!important;gap:12px}
+ .v12-footer .footer-brand{grid-column:auto!important}
+ .v12-footer .footer-brand p{font-size:11px!important}
+ .v12-footer .footer-note{font-size:9px}
+ .v12-footer .footer-section a{font-size:11px}
+}
+@media (max-width:440px){
+ .topline{height:22px;min-height:22px;letter-spacing:.04em}
+ .shop-breadcrumb{font-size:10px}
+ .shop-page-v13 .catalog-title{font-size:clamp(32px,9.4vw,43px)!important}
+ .shop-page-v13 .catalog-subtitle{font-size:12px!important}
+ .shop-count-badge{margin-top:0;font-size:9px}
+ .shop-page-v13 .chip{padding:8px 11px!important;min-height:38px!important}
+ .shop-page-v13 .shop-tools{grid-template-columns:minmax(0,1fr) minmax(114px,41%)}
+ .shoe-tag{font-size:8px!important;padding:5px 6px!important}
+ .drop-badge{padding:5px 7px;font-size:8px}
+ .shoe-arrow{padding:0 8px!important;height:29px!important;font-size:9px!important}
+ .save-pair{width:30px!important;height:30px!important;font-size:19px!important}
+ .shoe-meta{display:flex;flex-direction:column;gap:5px}
+ .shoe-meta .amount{align-self:start}
+ .v12-footer .footer-main{grid-template-columns:repeat(2,minmax(0,1fr))!important;row-gap:18px!important}
+ .v12-footer .footer-brand{grid-column:1 / -1!important}
+ .v12-footer .footer-bottom-line{font-size:9px}
+}
+@media (max-width:340px){
+ .shop-page-v13 .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .shoe-visual{aspect-ratio:1/1.15}
+ .shoe-meta strong{font-size:11px!important}
+ .shoe-meta .amount{font-size:12px!important}
+ .shoe-tag{max-width:65%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+}
+@media (prefers-reduced-motion:reduce){
+ .shoe-card,.shoe-visual img,.v12-category-card,.v12-category-card img{transition:none!important;animation:none!important}
+}

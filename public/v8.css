@@ -1,0 +1,137 @@
+/* AUVRYKO — 2026 Portfolio Release
+   Final styling layer. Original responsive breakpoints remain intact; v8 elevates
+   navigation feedback, campaign storytelling, product cards, and tap affordances. */
+:root{--brand-highlight:#d6ee93;--brand-spot:#ed7d5e}
+:root[data-theme="dark"]{--brand-highlight:#c9ed84;--brand-spot:#f09373}
+
+/* An actual active SECTION state, not just a tiny underline. */
+.header{gap:12px}
+.header nav{gap:5px;align-items:center}
+.header nav a,.header nav a.nav-current{height:36px;padding:0 12px;border-radius:8px;align-self:center;border:1px solid transparent;transition:background .22s,color .22s,border .22s,transform .22s,box-shadow .22s}
+.header nav a:hover{background:var(--surface-soft);color:var(--ink);border-color:var(--line)}
+.header nav a.nav-current,.header nav a.nav-current:hover,
+:root[data-theme="dark"] .header nav a.nav-current{color:#14251a!important;background:var(--brand-highlight)!important;border-color:#b5d17f!important;box-shadow:inset 0 -2px 0 #739f55,0 3px 9px #17281612}
+.header nav a.nav-current .nav-active-dot{display:none}
+.header nav a.nav-tapped{animation:navTap .4s ease-out}
+@keyframes navTap{0%{transform:scale(.92)}55%{transform:scale(1.06)}100%{transform:scale(1)}}
+.header-actions #ordersLink.nav-current{background:var(--brand-highlight);color:#14251a;border:1px solid #b5d17f;border-radius:8px;padding:11px 12px}
+.header-actions #ordersLink{transition:background .2s,color .2s;border-radius:8px}
+.route-strip{height:30px;display:flex;align-items:center;gap:13px;padding:0 4.25%;background:var(--surface-soft);color:var(--ink);border-bottom:1px solid var(--line);font-size:9px;font-weight:850;letter-spacing:.11em;white-space:nowrap;overflow:hidden}
+.strip-kicker{font-size:8px;opacity:.63;letter-spacing:.16em}
+#routeStripLabel{display:inline-flex;align-items:center;gap:7px;font-weight:900}
+#routeStripLabel:before{content:'';display:inline-block;width:6px;height:6px;background:var(--brand-spot);border-radius:50%}
+.strip-end{margin-left:auto;font-size:8px;opacity:.49}
+
+/* Scrollable campaign ticker, distinct editorial insert, no products on Home */
+.marquee-band{background:#dbf0a2;border-top:1px solid #b6ca8a;border-bottom:1px solid #b6ca8a;overflow:hidden;color:#1b3324;padding:17px 0}
+.marquee-track{width:max-content;display:flex;align-items:center;gap:26px;animation:marqueeDrift 35s linear infinite}
+.marquee-track span{font-family:'Barlow Condensed',Impact,sans-serif;font-size:25px;letter-spacing:.08em;font-weight:800;white-space:nowrap}
+.marquee-track b{font-size:23px;color:#d55c43}
+@keyframes marqueeDrift{to{transform:translateX(-50%)}}
+.drop-story{margin:95px 4% 100px;display:grid;grid-template-columns:1.13fr .87fr;min-height:530px;background:#1a2c24;color:#fff;overflow:hidden;border-radius:14px;position:relative;isolation:isolate;box-shadow:0 32px 65px #12261a1b}
+.drop-story-art{position:relative;min-height:530px;background:radial-gradient(ellipse at 52% 40%,#eef3bb 0%,#c8e88d 55%,#acc975 100%);color:#223222;overflow:hidden}
+.drop-story-art:before{content:'AUVRYKO';position:absolute;font:900 clamp(140px,18vw,310px) 'Barlow Condensed',Impact,sans-serif;top:10%;left:-5%;letter-spacing:-.12em;white-space:nowrap;color:#789b4d38;transform:rotate(-8deg)}
+.drop-art-graphic{height:100%;display:flex;align-items:center;justify-content:center;position:relative}
+.drop-orbit{height:65%;aspect-ratio:1;border:1px solid #2c4b3538;border-radius:50%;position:absolute;box-shadow:0 0 0 65px #304b2f0d,0 0 0 130px #304b2f0a;animation:orbitBreathe 6s ease-in-out infinite}
+.drop-art-graphic img{display:block;position:relative;width:112%;max-height:470px;object-fit:contain;filter:drop-shadow(12px 42px 22px #33523151);transform:rotate(-11deg);animation:shoeFloat 5s ease-in-out infinite}
+.drop-eyebrow,.drop-footnote{position:absolute;z-index:2;font-weight:900;letter-spacing:.16em;font-size:10px;left:32px}
+.drop-eyebrow{top:32px}.drop-footnote{bottom:31px}
+.drop-story-copy{padding:65px 7%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;position:relative;background:radial-gradient(circle at 105% 10%,#4a674446,transparent 52%),#1a2c24}
+.drop-story-copy .section-label{color:#c0d4b8}
+.drop-story-copy h2{font:900 clamp(76px,7.7vw,143px)/.79 'Barlow Condensed',Impact,sans-serif;letter-spacing:-.04em;margin:35px 0 23px;color:#f8f8ef}
+.drop-story-copy h2 span{color:#d9f795;font-size:.49em;vertical-align:top;display:inline-block;transform:translate(7px,6px)}
+.drop-story-copy p{max-width:320px;line-height:1.75;font-size:15px;color:#c9d4c8}
+.drop-count{display:flex;align-items:center;gap:13px;margin:20px 0 28px;padding-bottom:12px;border-bottom:1px solid #58765b}
+.drop-count strong{font:800 70px/.9 'Barlow Condensed',Impact,sans-serif;color:#d9f795}
+.drop-count span{font-size:10px;line-height:1.5;letter-spacing:.13em;font-weight:900}
+.drop-cta{background:#ec7b59!important;color:#fff!important}
+.drop-cta:hover{background:#fff!important;color:#193122!important}
+@keyframes orbitBreathe{50%{transform:scale(1.055)}}
+@keyframes shoeFloat{50%{transform:translateY(-14px) rotate(-8deg)}}
+
+/* Campaign and catalogue hierarchy */
+.home-hero .hero-text h1 .accent{filter:drop-shadow(0 6px 16px #d7ec9c0a)}
+.rail-intro,.category-rail a{transition:background .2s}
+.category-rail a:hover{background:#e6faac;color:#15291b}
+.shop-header{border-radius:8px 8px 0 0}
+.shop-header .catalog-intro{max-width:920px}
+.catalog-title{line-height:.83;letter-spacing:-.05em}
+.product-grid{gap:22px;row-gap:30px}
+.shoe-card{border:1px solid var(--line);box-shadow:0 7px 25px #101c0f0a;border-radius:10px}
+.shoe-visual{min-height:240px;border-radius:10px 10px 0 0}
+.shoe-visual img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 17px 16px #172b1833)}
+.shoe-tag{left:12px;top:12px;font-size:8px;letter-spacing:.08em;background:#fffdf5df}
+.save-pair{position:absolute;z-index:10;right:13px;top:12px;height:37px;width:37px;border-radius:100%;display:grid;place-items:center;border:1px solid #22452c26;color:#273d2b;background:#fffcf1df;cursor:pointer;font:500 23px/1 'DM Sans',sans-serif;box-shadow:0 4px 12px #18251815;transition:transform .2s,background .2s}
+.save-pair:hover{background:#fff;transform:scale(1.09)}
+.save-pair.is-saved{color:#fff;background:#e67e5c;border-color:#df6a4e}
+.save-pair:focus-visible{outline:3px solid #f06f4b;outline-offset:2px}
+.drop-badge{position:absolute;left:12px;bottom:14px;z-index:3;background:#233b2e;color:#e3ffab;font:900 9px/1.1 'DM Sans',sans-serif;letter-spacing:.11em;padding:8px 10px;border-radius:3px}
+.shoe-arrow{right:13px;bottom:12px}
+.shoe-meta{border-top:1px solid #122b1a12;min-height:82px}
+.shoe-meta strong{font-weight:900}
+.shoe-meta small{margin-top:5px;display:block;letter-spacing:.025em}
+.shoe-card:hover{box-shadow:0 19px 40px #10281722;transform:translateY(-6px)}
+.shoe-card:focus-visible{outline:3px solid var(--brand-spot);outline-offset:3px}
+.catalog-bottom{background:#192c24;color:#e9f4df;border-radius:12px;margin:100px 0 20px;padding:48px 50px;display:grid;grid-template-columns:1fr 1fr auto;gap:35px;align-items:center}
+.catalog-bottom .section-label{color:#a3b69e}
+.catalog-bottom h2{font:900 65px/.86 'Barlow Condensed',Impact,sans-serif;margin:16px 0 0}
+.catalog-bottom p{color:#c7d5c7;line-height:1.8;font-size:14px;max-width:340px}
+.catalog-bottom .outline-light{white-space:nowrap}
+:root[data-theme="dark"] .shoe-card{border-color:#405746}
+:root[data-theme="dark"] .shoe-meta{border-top:1px solid #445448}
+:root[data-theme="dark"] .route-strip{background:#1e3126}
+:root[data-theme="dark"] .marquee-band{background:#c6e992;color:#16261b}
+:root[data-theme="dark"] .header nav a:hover:not(.nav-current){background:#273a2e;color:#f3faee}
+:root[data-theme="dark"] .drop-story{box-shadow:0 26px 70px #0004}
+
+/* Fine touch layouts */
+@media(min-width:981px) and (max-width:1360px){
+ .header{padding-left:3%;padding-right:3%;gap:8px}
+ .header nav{gap:2px}
+ .header nav a{padding:0 8px;font-size:9px}
+ .header-actions{gap:9px}
+ .logo{font-size:26px}
+ .header-actions .theme-toggle{min-width:63px;padding:7px}
+}
+@media(max-width:980px){
+ .header nav{gap:4px;align-items:stretch;padding:16px 4% 24px}
+ .header nav a{height:47px!important;align-self:stretch;justify-content:space-between;padding:0 17px!important;border:1px solid var(--line);border-radius:8px;font-size:12px}
+ .header nav a:after{content:'↗';font-weight:500;color:inherit}
+ .header nav a.nav-current{border-color:#c3d991!important}
+ .header nav .mobile-account-link{margin-top:4px;padding:0 15px;border-radius:8px}
+ .drop-story{grid-template-columns:1fr 1fr;margin-top:65px;min-height:400px}
+ .drop-story-art{min-height:400px}
+ .drop-art-graphic img{max-height:380px}
+ .drop-story-copy h2{font-size:clamp(66px,9vw,106px)}
+ .catalog-bottom{grid-template-columns:1fr 1fr;padding:38px}
+ .catalog-bottom .outline-light{grid-column:1/-1;justify-self:start}
+}
+@media(max-width:680px){
+ .route-strip{height:32px;padding:0 4%;font-size:8px;letter-spacing:.04em}
+ .strip-kicker,.strip-end{display:none}
+ #routeStripLabel{font-size:9px}
+ .marquee-band{padding:12px 0}
+ .marquee-track{gap:19px;animation-duration:45s}
+ .marquee-track span{font-size:20px}
+ .drop-story{margin:55px 4% 88px;grid-template-columns:1fr;border-radius:9px}
+ .drop-story-art{min-height:320px}
+ .drop-story-art:before{font-size:205px;top:9%}
+ .drop-art-graphic img{max-height:320px;width:110%}
+ .drop-eyebrow,.drop-footnote{left:22px;font-size:8px}
+ .drop-eyebrow{top:20px}.drop-footnote{bottom:19px}
+ .drop-story-copy{padding:38px 6% 45px}
+ .drop-story-copy h2{font-size:clamp(84px,16vw,108px);margin:26px 0 12px}
+ .drop-count{margin:14px 0 24px}
+ .drop-count strong{font-size:58px}
+ .catalog-bottom{grid-template-columns:1fr;margin:60px 0 0;padding:28px;gap:12px}
+ .catalog-bottom h2{font-size:59px}
+ .catalog-bottom .outline-light{grid-column:1}
+ .shoe-visual{min-height:170px}
+ .save-pair{width:32px;height:32px;top:8px;right:8px;font-size:19px}
+ .drop-badge{font-size:7px;left:8px;bottom:9px;padding:6px 7px}
+ .shoe-tag{left:7px;top:8px;font-size:7px;padding:5px 6px;max-width:calc(100% - 52px);line-height:1.2}
+ .shoe-meta{min-height:95px}
+ .shoe-card:hover{transform:none}
+}
+@media(max-width:360px){.shoe-visual{min-height:145px}.drop-story-art{min-height:270px}.header .logo{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.marquee-track,.drop-orbit,.drop-art-graphic img{animation:none!important}.header nav a{transition:none!important}}
